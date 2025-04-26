@@ -11,7 +11,7 @@ This program receives an audio file of a violin performance of Dvořák’s Humo
 Libraries used: Keras (TensorFlow), NumPy, seaborn
 - Keras: Library used to develop CNN model
 - NumPy: Library used for data analysis
-- seaborn: Library used to generate confusion matrix
+- seaborn: Library used to generate confusion matrix heatmap
 
 ## Aim
 
@@ -21,11 +21,26 @@ The school allowed us to leave a few school instruments in the welfare center fo
 
 ## Dataset
 
-The input performance was limited to one piece: Dvořák’s Humoresque. This was partly due to it being the piece I was currently teaching, and because of the limitations of data collection. I requested the help of my violin teacher, who had access to numerous students of varying skill levels through her own students and her musical friends/relatives, and throug her Ilsan Youth Orchestra. Together we collected recordings from 98 different individuals on their takes of Dvořák’s Humoresque in .wav format for lossless audio, with at least 30 of each tier (low, mid, high). 80 recordings would be used for training, 8 for validating, and 10 for testing. 
+The input performance was limited to one piece: Dvořák’s Humoresque. This was partly due to it being the piece I was currently teaching, and because of the limitations of data collection. I requested the help of my violin teacher, who had access to numerous students of varying skill levels through her own students and her musical friends/relatives, and through her Ilsan Youth Orchestra. Together we collected recordings from 98 different individuals on their takes of Dvořák’s Humoresque in WAV format for lossless audio, with at least 30 of each tier (low, mid, high). 80 recordings would be used for training, 8 for validating, and 10 for testing. 
 
 <figure class="image">
   <img src="https://github.com/user-attachments/assets/70d8c27e-fe9e-4628-9695-f2ee2ed90fe8">
-  <figcaption>Figure 0.1 The “mid” file with 31 mid-tier audio files</figcaption>
+  <figcaption>Figure 1. The “mid” file with 31 mid-tier audio files</figcaption>
 </figure>
 
-## Core Features  
+## Core Features 
+
+### Spectrogram Generation from Audio
+
+ML analysis of audio recordings can be reliably done by converting the audio file into a spectrogram, which is analyzed as an image via a convolutionary neural network. Audio processing methods provided by the TensorFlow library was utilized to pre-process the WAV audio files. The `decode_audio` function was used to normalize the 16000 hz mono-channel WAV file into a tensor of float32 and range [-1.0, 1.0], which was then cut to produce equal-length portions of each recording. This was then processed by a Short-Time Fourier Transform (STFT) function (`tf.signal.stft`). This converts the audio into its respective component frequencies while also preserving time information. (This is why regular Fourier transforms (`tf.signal.fft`) were not used.) The component frequencies are given in complex tensor values; however, as we only need the magnitude of the frequencies, an absolute value function was used to create both a waveform and a spectrogram for each audio file. 
+
+<figure class="image">
+  <img src="https://github.com/user-attachments/assets/c9c3fb12-c2fb-4080-a5fa-07a30333cd0b">
+  <figcaption>Figure 2. Example waveform and spectrogram plotted from audio file</figcaption>
+</figure>
+
+### Model (CNN)
+
+### Training
+
+### Results
