@@ -36,6 +36,7 @@ ML analysis of audio recordings can be reliably done by converting the audio fil
 <div align="center" style="display: flex">
    <img src="https://github.com/user-attachments/assets/951788a9-652c-4bb1-8515-9e3f43e130e1" height=600>
 </div>
+
 *Figure 2. Example waveform and spectrogram plotted from audio file*
 
 ### Model (CNN)
@@ -45,6 +46,7 @@ As the model should analyze a spectrogram in the form of an image, a convolution
 The model was then trained using the cross-entropy loss function and the Adam optimization algorithm to efficiently calculate gradient descent. The model was run on the training dataset in 10 epochs, with early stopping enabled to prevent dataset overfitting. 
 
 ![pic3](https://github.com/user-attachments/assets/c5170736-01e8-498c-ad79-6c5b199fa046)
+
 *Figure 3. Training process with 10 epochs, and early stopping initiated at epoch #8*
 
 The resulting learning curve is displayed below. We see that early stopping has helped prevent the validation loss curve from rising, indicating a good fit. 
@@ -52,6 +54,7 @@ The resulting learning curve is displayed below. We see that early stopping has 
 <div align="center" style="display: flex">
    <img src="https://github.com/user-attachments/assets/26cfbef4-860d-4ad0-b19d-3e8e0103ef2f" height=600>
 </div>
+
 *Figure 4. Learning curves (training & validation)*
 
 ### Results
@@ -61,5 +64,6 @@ Running the model on our testing dataset yielded an accuracy of 70%. To investig
 <div align="center" style="display: flex">
    <img src="https://github.com/user-attachments/assets/da963175-1085-4dc2-8b3b-8f8826e76240" height=600>
 </div>
+
 *Figure 5. Confusion Matrix of Testing Results*
 
