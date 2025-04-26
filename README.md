@@ -23,7 +23,8 @@ The school allowed us to leave a few school instruments in the welfare center fo
 
 The input performance was limited to one piece: Dvořák’s Humoresque. This was partly due to it being the piece I was currently teaching, and because of the limitations of data collection. I requested the help of my violin teacher, who had access to numerous students of varying skill levels through her own students and her musical friends/relatives, and through her Ilsan Youth Orchestra. Together we collected recordings from 98 different individuals on their takes of Dvořák’s Humoresque in WAV format for lossless audio, with at least 30 of each tier (low, mid, high). 80 recordings would be used for training, 8 for validating, and 10 for testing. 
 
-![image](https://github.com/user-attachments/assets/bbba0500-5c69-4352-9ea9-9497b3c6f37b)
+![pic1](https://github.com/user-attachments/assets/f6ce5691-bff3-41f3-9960-b4583906656f)
+
 *Figure 1. The “mid” file with 31 mid-tier audio files*
 
 ## Core Features 
