@@ -33,8 +33,7 @@ The input performance was limited to one piece: Dvořák’s Humoresque. This wa
 
 ML analysis of audio recordings can be reliably done by converting the audio file into a spectrogram, which is analyzed as an image via a convolutionary neural network. Audio processing methods provided by the TensorFlow library was utilized to pre-process the WAV audio files. The `decode_audio` function was used to normalize the 16000 hz mono-channel WAV file into a tensor of float32 and range [-1.0, 1.0], which was then cut to produce equal-length portions of each recording. This was then processed by a Short-Time Fourier Transform (STFT) function (`tf.signal.stft`). This converts the audio into its respective component frequencies while also preserving time information. (This is why regular Fourier transforms (`tf.signal.fft`) were not used.) The component frequencies are given in complex tensor values; however, as we only need the magnitude of the frequencies, an absolute value function was used to create both a waveform and a spectrogram for each audio file. 
 
-![pic2](https://github.com/user-attachments/assets/946c4bbd-6518-4ac1-9f18-c8e8a25503a0)
-
+![pic2](https://github.com/user-attachments/assets/951788a9-652c-4bb1-8515-9e3f43e130e1)
 *Figure 2. Example waveform and spectrogram plotted from audio file*
 
 ### Model (CNN)
