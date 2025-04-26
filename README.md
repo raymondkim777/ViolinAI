@@ -40,6 +40,13 @@ ML analysis of audio recordings can be reliably done by converting the audio fil
 
 ### Model (CNN)
 
+As the model should analyze a spectrogram in the form of an image, a convolutional neural network (CNN) was created using a Keras Sequential model. The network contians a normalization layer (to reduce bias in the dataset), two convolutional layers and one Dense layer (128 nodes) each with the ReLU activation function, and a final output layer consisting of 3 nodes, each with probabilities of low, mid, and high. A MaxPooling2D layer was added to decrease the dimension of the nodes, as it significantly decreased computation time without sacrificing accuracy. 
+
+The model was then trained using the cross-entropy loss function and the Adam optimization algorithm to efficiently calculate gradient descent. The model was run on the training dataset in 10 epochs, with early stopping enabled to prevent dataset overfitting. 
+
+![pic3](https://github.com/user-attachments/assets/c5170736-01e8-498c-ad79-6c5b199fa046)
+*Figure 3. Training process with 10 epochs, and early stopping initiated at epoch #8*
+
 ### Training
 
 ### Results
