@@ -10,11 +10,9 @@ I hence decided to create a program that could instead do it for me. A teacher/v
 ## Dataset
 I decided to limit the musical pieces my AI would analyze to the piece I was currently teaching my students: Dvořák’s Humoresque. Working closely with my violin teacher, who alone taught many students of different skill levels and also had many musical friends/relatives who were also teachers, as well as Ilsan Youth Orchestra (where I was a member), we collected recordings from 98 different individuals on their takes of the piece, with at least 30 of each tier (low, mid, high) for both pieces. The audio files’ format was converted from .m4a to .wav. I was going to use 80 random recordings to train the data, 8 for validation, and 10 for testing. 
 
-![pic1](https://github.com/user-attachments/assets/1b91d4ae-7d00-487c-b76b-3f6245981476)
-
 <figure class="image">
-  <img src="{{ https://github.com/user-attachments/assets/70d8c27e-fe9e-4628-9695-f2ee2ed90fe8 }}">
-  <figcaption>{{ Figure 0.1 The “mid” file with 31 mid-tier audio files }}</figcaption>
+  <img src="https://github.com/user-attachments/assets/70d8c27e-fe9e-4628-9695-f2ee2ed90fe8">
+  <figcaption>Figure 0.1 The “mid” file with 31 mid-tier audio files</figcaption>
 </figure>
 
 
