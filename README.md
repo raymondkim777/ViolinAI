@@ -47,6 +47,15 @@ The model was then trained using the cross-entropy loss function and the Adam op
 ![pic3](https://github.com/user-attachments/assets/c5170736-01e8-498c-ad79-6c5b199fa046)
 *Figure 3. Training process with 10 epochs, and early stopping initiated at epoch #8*
 
-### Training
+The resulting learning curve is displayed below. We see that early stopping has helped prevent the validation loss curve from rising, indicating a good fit. 
+
+![image](https://github.com/user-attachments/assets/26cfbef4-860d-4ad0-b19d-3e8e0103ef2f)
+*Figure 4. Learning curves (training & validation)*
 
 ### Results
+
+Running the model on our testing dataset yielded an accuracy of 70%. To investigate this further, a confusion matrix was created, with the horizontal axis as the prediction and the vertical axis as the actual tier. We observe that the model could reliably identify high-level performances, but occasionally mislabeled 'low' performances. Most of the mistakes occurred in the 'mid' performances, where the model had difficulty grading nuances in performance. 
+
+![image](https://github.com/user-attachments/assets/da963175-1085-4dc2-8b3b-8f8826e76240)
+*Figure 5. Confusion Matrix of Testing Results*
+
